@@ -8,8 +8,7 @@
         Fire And Lion
     </author>
     <content src="index.html" />
-	<icon src="res/icon.png" />
-    <plugin name="cordova-plugin-whitelist" spec="1" />
+    <icon src="res/icon.png" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
@@ -25,5 +24,6 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <engine name="android" spec="~6.2.3" />
+    <plugin name="cordova-plugin-whitelist" spec="1" />
     <engine name="ios" spec="~4.4.0" />
 </widget>
