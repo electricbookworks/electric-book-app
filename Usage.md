@@ -70,6 +70,19 @@ This process will create a .APK file that can be directly installed on a device.
 be able to run the build directly on the device by going:
 cordova run android --device
 
+Finally to use the play store the application much be digitally signed. Specifically this means generating a signature on a local machine - this keystore file that you create is critical for proving your identity to the play store and if you loose it you are really in trouble - so you need to keep this keystore a) very safe b) very private (i.e. not in your repository).
+
+Use this command from the base directory to generate a keystore:
+```keytool -genkey -v -keystore my-release-key.jks -keyalg RSA -keysize 2048 -validity 10000 -alias my-alias```
+
+Where you should replace my-release-key.jks is the name of the keystore it will create and my-alias is a specific alias to a key within the keystore - this process will prompt you to create a password which you need to remember.
+
+Now edit the '''build.json''' file in your main directory and correctly set the path to the keystore; the passwords and the alias.
+
+After you have completed these steps doing a:
+```cordova build android --release```
+will build a signed release copy all ready for the store.
+
 ### Build for iOS
 From the command prompt go into the bookapp directory and run:
 ```cordova build ios```
