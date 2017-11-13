@@ -18,7 +18,7 @@ The [Cordova](https://cordova.apache.org/) packages install easily using npm wit
 
 `npm install -g cordova` on Windows, or
 
-`sudo npm install -g cordova` on OSX and *nix.
+`sudo npm install -g cordova` on OSX and \*nix.
 
 After this, just run `cordova` on the command line for its help text.
 
