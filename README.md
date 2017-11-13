@@ -82,7 +82,7 @@ cordova run android --device
 
 #### Signing the app
 
-Finally, to work on the Play Store, the application much be digitally signed. This means generating a signature on a local machine.
+Finally, to work on the Play Store, the application much be [digitally signed](https://developer.android.com/studio/publish/app-signing.html). This means generating a signature on a local machine.
 
 This keystore file that you create is critical for proving your identity to the Play Store, and if you lose it you are really in trouble! So you need to keep this keystore *very safe* and *very private* – do not commit it to your repository.
 
